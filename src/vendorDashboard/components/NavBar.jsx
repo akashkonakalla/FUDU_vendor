@@ -6,22 +6,32 @@ const NavBar = ({showLoginHandler, showRegisterHandler, showLogOut, logOutHandle
 
   return (
     <div className="navSection">
+
       
-        <div className="company">
-            Vendor Dashboard
-        </div>
-        <div className="firmName">
-            <h4>Firname : {firmName}</h4>
-        </div>
-        <div className="userAuth">
-          {!showLogOut ?  <>
-           <span onClick={showLoginHandler}>Login / </span>
-          <span onClick={showRegisterHandler}>Register</span>
-          </> : <span onClick={logOutHandler}
-          className='logout'
-          >Logout</span>  }
-          
-        </div>
+      <div className="leftNav">
+        <img 
+          src="/assets/FUDU ICON.png" 
+          alt="FUDU logo" 
+          id="fudulogo" 
+        />
+        <h1>FUDU Vendor Dashboard</h1>
+      </div>
+
+      <div className="firmName">
+        <h4>Firmname : {firmName}</h4>
+      </div>
+      
+      <div className="userAuth">
+        {!showLogOut ? (
+          <>
+            <span onClick={showLoginHandler}>Login / </span>
+            <span onClick={showRegisterHandler}>Register</span>
+          </>
+        ) : (
+          <span onClick={logOutHandler} className='logout'>Logout</span>
+        )}
+      </div>
+
     </div>
   )
 }

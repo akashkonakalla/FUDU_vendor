@@ -12,22 +12,49 @@ body {
 .navSection {
     height: 80px;
     display: flex;
-    justify-content: space-between;
-    /* background-color: rgb(54, 52, 180); */
-    background-color: #F46036;
+    justify-content: space-between; /* Spread items evenly */
     align-items: center;
+    background-color: #6ec6c4;
+    padding: 0 30px;
     color: white;
-    padding: 0 20px;
-    font-size: large;
 }
 
-.userAuth {
-    cursor: pointer;
+/* LEFT SECTION */
+.leftNav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
+/* Logo */
+#fudulogo {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+/* Firm Name */
+.firmName h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Logout Button */
 .logout {
     cursor: pointer;
+    background-color: #dc3545;
+    padding: 8px 16px;
+    color: white;
+    border-radius: 6px;
+    transition: 0.2s ease-in-out;
+    font-weight: 600;
 }
+
+.logout:hover {
+    background-color: #b02a37;
+}
+
 
 .sideBarSection {
     width: 100%;
@@ -35,7 +62,7 @@ body {
     height: 95vh;
     padding-top: 10px;
     /* background-color: lightgray; */
-    background-color: #2E294E;
+    background-color: #5459AC;
     color: white;
 }
 
@@ -286,11 +313,6 @@ h3 {
 
 
 
-/* ===================================================== */
-/* ⭐ FINAL ADDED: TABLE UI IMPROVEMENTS (SAFE VERSION)  */
-/* ===================================================== */
-
-/* Fade-in animation (does NOT affect layout) */
 @keyframes tableFadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
