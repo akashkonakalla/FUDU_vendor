@@ -34,6 +34,9 @@ const Login = ({showWelcomeHandler}) => {
             showWelcomeHandler()
 
           }
+          else{
+            alert('Login failed, Invalid credentials');
+          }
           const vendorId = data.vendorId
           console.log("checking for VendorId:",vendorId)
           const vendorResponse = await fetch(`${API_URL}/vendor/single-vendor/${vendorId}`)
@@ -45,8 +48,8 @@ const Login = ({showWelcomeHandler}) => {
             localStorage.setItem('firmId', vendorFirmId);
             localStorage.setItem('firmName', vendorFirmName)
           }
-      } catch (error) {
-          alert("login fail")
+      // } catch (error) {
+      //     alert("login fail")
       } finally {
         setLoading(false); 
       }
